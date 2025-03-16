@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="highPressureWasher" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/vehicle.xsd">
+    <storeData>
+        <name>$l10n_shopItem_dirtynator</name>
+        <functions>
+            <function>$l10n_function_dirtynator</function>
+        </functions>
+        <specs>
+            <power>8.7</power>
+        </specs>
+        <image>store/store_hds9184M.png</image>
+        <price>2000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KAERCHER</brand>
+        <category>handtoolsMisc</category>
+        <shopHeight>1.2</shopHeight>
+        <vertexBufferMemoryUsage>173312</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>51968</indexBufferMemoryUsage>
+        <textureMemoryUsage>1048576</textureMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_tool</typeDesc>
+        <filename>i3d/hds9184M.i3d</filename>
+        <sounds filename="$data/vehicles/kaercher/hds9184M/sounds/hds9184M.xml"/>
+        <size width="0.77" length="1.35" height="1.06" lengthOffset="-0.03"/>
+        <components>
+            <component centerOfMass="0 0.35 0.1" solverIterationCount="10" mass="118"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
+        <mapHotspot type="TOOL"/>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT">
+                <wheels autoRotateBackSpeed="2.1">
+                    <wheel isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.05" radius="0.08" width="0.06" mass="0.01" repr="wheelFrontLeftRot"  driveNode="wheelFrontLeft"  forcePointRatio="0.5" initialCompression="10" suspTravel="0.05" spring="7" damper="10" yOffset="0.003"/>
+                        <tire tireTrackAtlasIndex="4"/>
+                    </wheel>
+                    <wheel isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.05" radius="0.08" width="0.06" mass="0.01" repr="wheelFrontRightRot" driveNode="wheelFrontRight" forcePointRatio="0.5" initialCompression="10" suspTravel="0.05" spring="7" damper="10" yOffset="0.003"/>
+                        <tire tireTrackAtlasIndex="4"/>
+                    </wheel>
+                    <wheel isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.05" radius="0.175" width="0.08" mass="0.01" repr="wheelBackLeft"  forcePointRatio="0.5" initialCompression="10" suspTravel="0.05" spring="7" damper="10" yOffset="0.005"/>
+                        <tire tireTrackAtlasIndex="4"/>
+                    </wheel>
+                    <wheel isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.05" radius="0.175" width="0.08" mass="0.01" repr="wheelBackRight" forcePointRatio="0.5" initialCompression="10" suspTravel="0.05" spring="7" damper="10" yOffset="0.005"/>
+                        <tire tireTrackAtlasIndex="4"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <ackermannSteeringConfigurations>
+            <ackermannSteering rotSpeed="40" rotMax="38" rotCenterWheel1="3" rotCenterWheel2="4"/>
+        </ackermannSteeringConfigurations>
+    </wheels>
+
+    <enterable isTabbable="false">
+        <exitPoint node="exitPoint"/>
+        <enterReferenceNode node="hds9184M_vis"/>
+
+        <cameras>
+            <camera node="outdoorCamera1" rotatable="true" rotateNode="outdoorCameraTarget" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="3.1" transMax="40" translation="0 0 3.4" rotation="-18 180 0" >
+                <raycastNode node="cameraRaycastNode1"/>
+                <raycastNode node="cameraRaycastNode2"/>
+            </camera>
+            <camera node="indoorCamera1" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" shadowFocusBox="shadowFocusBox" useOutdoorSounds="true"/>
+        </cameras>
+
+        <characterNode node="skeleton" cameraMinDistance="1.75" useAnimation="true" />
+
+        <enterAnimation name="enterAnimation"/>
+    </enterable>
+
+    <motorized forceSpeedHudDisplay="true">
+        <differentialConfigurations>
+            <differentialConfiguration>
+                <differentials>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.4" wheelIndex1="1" wheelIndex2="2"/>
+                    <differential torqueRatio="0.5" maxSpeedRatio="2.5" wheelIndex1="3" wheelIndex2="4"/>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.3" differentialIndex1="1" differentialIndex2="2"/>
+                </differentials>
+            </differentialConfiguration>
+        </differentialConfigurations>
+
+        <motorConfigurations>
+            <motorConfiguration price="0" hp="8.7">
+                <motor torqueScale="0.077" minRpm="850" maxRpm="2200" maxForwardSpeed="7" maxBackwardSpeed="5" brakeForce="0.01" lowBrakeForceScale="0.1" accelerationLimit="1.6" dampingRateScale="0.08">
+                    <torque normRpm="0.45" torque="0.9"/>
+                    <torque normRpm="0.5" torque="0.97"/>
+                    <torque normRpm="0.59" torque="1"/>
+                    <torque normRpm="0.72" torque="1"/>
+                    <torque normRpm="0.86" torque="0.88"/>
+                    <torque normRpm="1" torque="0.72"/>
+                </motor>
+                <transmission minForwardGearRatio="118" maxForwardGearRatio="320" minBackwardGearRatio="165" maxBackwardGearRatio="320"/>
+            </motorConfiguration>
+        </motorConfigurations>
+
+        <motorStartDuration>0</motorStartDuration>
+
+        <dashboards>
+            <dashboard displayType="ANIMATION" valueType="speedDir" animName="speedAnimation" minValueAnim="-5" maxValueAnim="5"/>
+        </dashboards>
+    </motorized>
+
+    <pushHandTool>
+        <raycast node1="raycast01" node2="raycast02" playerNode="playerNode" positionSmoothnessFactor="0.4" positionSmoothnessFactorReverse="2" positionSmoothnessFactorSteering="0"/>
+        <wheels front="1 2" back="3 4"/>
+        <spine rotationForward="-20" rotationBackward="-20" rotationIdle="-5" ratio="0.6 0.2 0.2" speed="40"/>
+
+        <ikChains>
+            <target ikChain="rightArm"  targetNode="playerRightHandTarget" poseId="narrowFingers"/>
+            <target ikChain="leftArm"   targetNode="playerLeftHandTarget" poseId="narrowFingers"/>
+        </ikChains>
+
+        <customChainLimits>
+            <customChainLimit chainId="leftArm" nodeIndex="1" minRx="-50" maxRx="50" minRy="-80" maxRy="80" minRz="-75" maxRz="10" localLimits="true"/>
+            <customChainLimit chainId="leftArm" nodeIndex="2" minRx="-25" maxRx="25" minRy="-144" maxRy="-25" minRz="-10" maxRz="10" localLimits="true"/>
+
+            <customChainLimit chainId="rightArm" nodeIndex="1" minRx="-50" maxRx="50" minRy="-80" maxRy="80" minRz="-75" maxRz="10" localLimits="true"/>
+            <customChainLimit chainId="rightArm" nodeIndex="2" minRx="-25" maxRx="25" minRy="-144" maxRy="-25" minRz="-10" maxRz="10" localLimits="true"/>
+        </customChainLimits>
+
+        <playerConditionalAnimation>
+            <item id="idle" entryTransitionDuration="0.25" exitTransitionDuration="0.25" >
+                <clips>
+                    <clip clipName="idle1Source" />
+                </clips>
+                <conditions>
+                    <conditionGroup>
+                        <condition parameter="absSmoothedForwardVelocity" lower="0.2" />
+                    </conditionGroup>
+                </conditions>
+            </item>
+            <item id="walk" entryTransitionDuration="0.25" exitTransitionDuration="0.25" >
+                <clips speedScaleType="distance" speedScaleParameter="2.25">
+                    <clip clipName="walkFwd1Source" />
+                </clips>
+                <conditions>
+                    <conditionGroup>
+                        <condition parameter="smoothedForwardVelocity" between="0.3, 4"/>
+                    </conditionGroup>
+                </conditions>
+            </item>
+            <item id="walkBack" entryTransitionDuration="0.5" exitTransitionDuration="0.25" >
+                <clips speedScaleType="distance" speedScaleParameter="2.25">
+                    <clip clipName="walkBwdLoopSource" />
+                </clips>
+                <conditions>
+                    <conditionGroup>
+                        <condition parameter="smoothedForwardVelocity" between="-3, -0.3" />
+                    </conditionGroup>
+                </conditions>
+            </item>
+        </playerConditionalAnimation>
+    </pushHandTool>
+
+    <animations>
+        <animation name="enterAnimation">
+            <part node="playerCollision01" startTime="0" endTime="0.001" startTrans="0 0.55 0.6134" endTrans="0 0.55 -0.05"/>
+            <part node="playerCollision02" startTime="0" endTime="0.001" startTrans="0 0 0" endTrans="0 0.8 0"/>
+        </animation>
+        <animation name="speedAnimation">
+            <part node="player" startTime="0.0" endTime="0.5" startTrans="0 -0.53077 -1.1" endTrans="0 -0.53 -0.919"/>
+            <part node="player" startTime="0.5" endTime="1.0" startTrans="0 -0.53 -0.919" endTrans="0 -0.53 -1.0"/>
+        </animation>
+    </animations>
+
+    <foliageBending>
+        <bendingNode minX="-0.4" maxX="0.4" minZ="-0.65" maxZ="0.67" yOffset="0.16"/>
+    </foliageBending>
+
+    <highPressureWasher>
+        <effects>
+            <effectNode effectClass="ExhaustEffect" node="0" linkNode="exhaustParticle" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.9 0.9 0.9 0.1" maxRpmColor="0.9 0.9 0.9 0.4" minRpmScale="0.2" maxRpmScale="0.2" />
+        </effects>
+        <sounds>
+            <start template="pressureWasherStart" linkNode="0>" volumeScale="1.7"/>
+            <stop template="pressureWasherStop" linkNode="0>"   volumeScale="1.7"/>
+            <work template="pressureWasherRun01" linkNode="0>"  volumeScale="1.7"/>
+        </sounds>
+    </highPressureWasher>
+
+    <handToolHolders>
+        <handToolHolder>
+            <actions takeText="$l10n_action_takeHandTool" storeText="$l10n_action_returnHandTool"/>
+            <holder type="HPWLANCE" node="lanceNode"/>
+            <trigger node="playerTrigger" />
+            <spawnedHandToolFilename>xml/hds9184MLance.xml</spawnedHandToolFilename>
+        </handToolHolder>
+    </handToolHolders>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="hds9184M_vis" node="0>0" />
+        <i3dMapping id="wheelBackLeft" node="0>0|0|0" />
+        <i3dMapping id="wheelBackRight" node="0>0|0|1" />
+        <i3dMapping id="wheelFrontLeftRot" node="0>0|0|2" />
+        <i3dMapping id="wheelFrontLeft" node="0>0|0|2|0" />
+        <i3dMapping id="wheelFrontRightRot" node="0>0|0|3" />
+        <i3dMapping id="wheelFrontRight" node="0>0|0|3|0" />
+        <i3dMapping id="outdoorCameraTarget" node="0>0|1|0" />
+        <i3dMapping id="outdoorCamera1" node="0>0|1|0|0" />
+        <i3dMapping id="indoorCamera1" node="0>0|1|1" />
+        <i3dMapping id="cameraRaycastNode1" node="0>0|1|2" />
+        <i3dMapping id="cameraRaycastNode2" node="0>0|1|3" />
+        <i3dMapping id="shadowFocusBox" node="0>0|1|4" />
+        <i3dMapping id="exitPoint" node="0>0|2" />
+        <i3dMapping id="player" node="0>0|3" />
+        <i3dMapping id="playerNode" node="0>0|3|0" />
+        <i3dMapping id="skeleton" node="0>0|3|0|0" />
+        <i3dMapping id="raycast01" node="0>0|3|1" />
+        <i3dMapping id="raycast02" node="0>0|3|2" />
+        <i3dMapping id="playerCollision01" node="0>0|3|3" />
+        <i3dMapping id="playerCollision02" node="0>0|3|3|0" />
+        <i3dMapping id="handTargets" node="0>0|4" />
+        <i3dMapping id="playerLeftHandTarget" node="0>0|4|0" />
+        <i3dMapping id="playerRightHandTarget" node="0>0|4|1" />
+        <i3dMapping id="handToolHolder" node="0>0|6" />
+        <i3dMapping id="lanceNode" node="0>0|6|0" />
+        <i3dMapping id="playerTrigger" node="0>0|6|1" />
+        <i3dMapping id="exactFillRootNodeFuel" node="0>0|7|0" />
+        <i3dMapping id="exhaustParticle" node="0>0|8" />
+    </i3dMappings>
+</vehicle>

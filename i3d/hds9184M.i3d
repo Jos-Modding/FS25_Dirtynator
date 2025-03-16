@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="hds9184M.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="5" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="27" filename="$data/shared/default_normal.png"/>
+    <File fileId="8" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_diffuse.png"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_normal.png"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_specular.png"/>
+    <File fileId="14" filename="$data/shared/detailLibrary/flat_normal.png"/>
+    <File fileId="21" filename="$data/shared/detailLibrary/metallic/clear_diffuse.png"/>
+    <File fileId="22" filename="$data/shared/detailLibrary/metallic/clear_specular.png"/>
+    <File fileId="20" filename="$data/shared/detailLibrary/metallic/rough_specular.png"/>
+    <File fileId="15" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png"/>
+    <File fileId="13" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png"/>
+    <File fileId="19" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png"/>
+    <File fileId="18" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png"/>
+    <File fileId="17" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_diffuse.png"/>
+    <File fileId="16" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_specular.png"/>
+    <File fileId="25" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubberBlack_diffuse.png"/>
+    <File fileId="24" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_normal.png"/>
+    <File fileId="23" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_specular.png"/>
+    <File fileId="2" filename="$data/shared/white_diffuse.png"/>
+    <File fileId="26" filename="$data/vehicles/kaercher/hds9184M/hds9184MDecals_diffuse.png"/>
+    <File fileId="28" filename="$data/vehicles/kaercher/hds9184M/hds9184MDecals_vmask.png"/>
+    <File fileId="3" filename="$data/vehicles/kaercher/hds9184M/hds9184M_normal.png"/>
+    <File fileId="4" filename="$data/vehicles/kaercher/hds9184M/hds9184M_vmask.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="hds9184M_calibratedGlossPaint_mat" materialId="5" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.5 0.2 0.1"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.5"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.85"/>
+    </Material>
+    <Material name="hds9184M_chrome_mat" materialId="6" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="22"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="21"/>
+    </Material>
+    <Material name="hds9184M_KAERCHER_YELLOW1_mat" materialId="7" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.2 0.14 0.08"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="hds9184M_KAERCHER_YELLOW1_mat" materialId="8" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.5 0.2 0.1"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="hds9184M_metalPaintedBlack_mat" materialId="9" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="18"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="19"/>
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+    </Material>
+    <Material name="hds9184M_plasticPainted_mat" materialId="10" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="16"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="17"/>
+      <CustomParameter name="colorScale" value="0.5 0.2 0.1"/>
+    </Material>
+    <Material name="hds9184M_plasticPaintedBlack_mat" materialId="11" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="16"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="17"/>
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+    </Material>
+    <Material name="hds9184M_rubberBlack_mat" materialId="12" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="23"/>
+      <Custommap name="detailNormal" fileId="24"/>
+      <Custommap name="detailDiffuse" fileId="25"/>
+      <CustomParameter name="porosity" value="0.5"/>
+    </Material>
+    <Material name="hds9184M_silverRough_mat" materialId="13" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="20"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="21"/>
+      <CustomParameter name="colorScale" value="0.7379 0.7454 0.7529"/>
+    </Material>
+    <Material name="hds9184M_silverScratched_mat" materialId="14" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+    </Material>
+    <Material name="hds9184MDecals_metalPainted_mat" materialId="15" alphaBlending="true" customShaderId="5" customShaderVariation="vmaskUV2">
+      <Texture fileId="26"/>
+      <Normalmap fileId="27"/>
+      <Glossmap fileId="28"/>
+      <Custommap name="detailSpecular" fileId="18"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="19"/>
+    </Material>
+    <Material name="lambert1" materialId="16" diffuseColor="0.501961 0.501961 0.501961 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="hds9184M.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="hds9184M_main_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="26" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="16">
+      <Shape name="hds9184M_vis" translation="0 0.525714 -0.026628" shapeId="2" clipDistance="200" nodeId="27" castsShadows="true" receiveShadows="true" skinBindNodeIds="27 29 30 31 32 33 34" materialIds="7,8,14,5,10,9,11,13,6,8,12">
+        <TransformGroup name="wheels" translation="0 -0.525714 0.026628" nodeId="28">
+          <TransformGroup name="wheelBackLeft" translation="0.338936 0.174991 -0.161642" clipDistance="200" nodeId="29"/>
+          <TransformGroup name="wheelBackRight" translation="-0.338936 0.174991 -0.161642" clipDistance="200" nodeId="30"/>
+          <TransformGroup name="wheelFrontLeftRot" translation="0.160428 0.113651 0.391165" clipDistance="200" nodeId="31">
+            <TransformGroup name="wheelFrontLeft" translation="0 -0.033662 -0.032035" clipDistance="200" nodeId="32"/>
+          </TransformGroup>
+          <TransformGroup name="wheelFrontRightRot" translation="-0.160428 0.113651 0.391165" clipDistance="200" nodeId="33">
+            <TransformGroup name="wheelFrontRight" translation="0 -0.033662 -0.032035" clipDistance="200" nodeId="34"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="cameras" translation="0 -0.525714 0.026628" nodeId="35">
+          <TransformGroup name="outdoorCameraTarget" translation="0 0.8 0" rotation="-24 180 0" nodeId="36">
+            <Camera name="outdoorCamera1" translation="-1.27238 0.0674689 -0.0751575" rotation="80.6992 -65.9577 -93.5469" nodeId="37" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
+          </TransformGroup>
+          <Camera name="indoorCamera1" translation="0 1.65 -1.3" rotation="-18 180 0" nodeId="38" fov="60" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
+          <TransformGroup name="cameraRaycastNode1" translation="0 0.775024 0.527869" nodeId="39"/>
+          <TransformGroup name="cameraRaycastNode2" translation="0 0.988897 -0.629964" nodeId="40"/>
+          <Shape name="shadowFocusBox" translation="0 1.00092 -0.455586" shapeId="3" clipDistance="150" nodeId="41" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="16"/>
+        </TransformGroup>
+        <TransformGroup name="exitPoint" translation="0 -0.525714 -1.00403" nodeId="42"/>
+        <TransformGroup name="player" translation="0 -0.530766 -0.919349" nodeId="43">
+          <TransformGroup name="playerNode" nodeId="44">
+            <TransformGroup name="skeleton" translation="0 -0.01 0" nodeId="45"/>
+          </TransformGroup>
+          <TransformGroup name="raycast01" translation="0 0.757278 0" rotation="-10 0 0" nodeId="46"/>
+          <TransformGroup name="raycast02" translation="0 0.757278 0" rotation="10 0 0" nodeId="47"/>
+          <Shape name="playerCollision01" translation="0 0.556511 0.613399" shapeId="4" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="48" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="16">
+            <Shape name="playerCollision02" shapeId="4" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="49" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="16"/>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="handTargets" translation="0.026 0.20999 -0.61492" rotation="16.0115 0 0" clipDistance="300" nodeId="50">
+          <TransformGroup name="playerLeftHandTarget" translation="0.175762 0.227098 -0.054738" rotation="-1.00767 -79.4009 -90.5068" nodeId="51"/>
+          <TransformGroup name="playerRightHandTarget" translation="-0.233496 0.204027 -0.058034" rotation="27.1926 75.2609 111.428" nodeId="52"/>
+        </TransformGroup>
+        <TransformGroup name="characterTargets" translation="0 -0.525714 0.026628" nodeId="53">
+          <TransformGroup name="playerRightFootTarget" nodeId="54"/>
+          <TransformGroup name="playerLeftFootTarget" nodeId="55"/>
+        </TransformGroup>
+        <TransformGroup name="handToolHolder" translation="0.287298 0.262651 -0.550441" nodeId="56">
+          <TransformGroup name="lanceNode" translation="0.004 0.062 0.063" rotation="6.466 0 0" nodeId="57"/>
+          <Shape name="playerTrigger" translation="-0.287298 -0.288365 0.577069" shapeId="5" visibility="false" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="58" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="16"/>
+        </TransformGroup>
+        <TransformGroup name="fillUnit" nodeId="59">
+          <Shape name="exactFillRootNodeFuel" translation="0 0.033173 -0.395205" shapeId="6" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="60" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="16"/>
+        </TransformGroup>
+        <TransformGroup name="exhaustParticle" translation="0 0.351452 0.132798" nodeId="61"/>
+        <TransformGroup name="visuals" translation="0 -0.525714 0.026628" nodeId="62">
+          <Shape name="rope" translation="0.218824 0.514721 -0.617366" rotation="0 180 0" shapeId="7" clipDistance="40" nodeId="63" castsShadows="true" receiveShadows="true" materialIds="11,12"/>
+          <Shape name="decals" translation="0 0.187987 -0.161642" rotation="0 180 0" shapeId="8" visibility="false" clipDistance="40" nodeId="64" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="15"/>
+        </TransformGroup>
+      </Shape>
+    </Shape>
+  </Scene>
+
+</i3D>

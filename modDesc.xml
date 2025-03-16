@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="96">
+    <author>Jos</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Dirtynator</en>
+    </title>
+    <description>
+        <en><![CDATA[Don't like your equipment clean? Spray them dirty with the Dirtynator.
+
+Dirtynator (placeable)
+Category: Tools
+Price: $2,000
+
+Dirtynator (vehicle)
+Category: Hand Tools > Miscellaneous
+Price: $2,000
+Power: 7 hp
+Max. speed: 7 kph
+
+Latest version and bug reports on <a href="https://github.com/Jos-Modding/FS25_Dirtynator">GitHub</a>.
+]]>
+        </en>
+        <de><![CDATA[Don't like your equipment clean? Spray them dirty with the Dirtynator.
+
+Dirtynator (Gebäude)
+Shopkategorie: Tools
+Preis: 2.000€
+
+Dirtynator (Fahrzeug)
+Shopkategorie: Werkzeuge > Sonstiges
+Preis: 2.000€
+Leistung: 7 jp
+Höchstgeschwindigkeit: 7 km/h
+
+Aktuelle Version und Fehlerberichte auf <a href="https://github.com/Jos-Modding/FS25_Dirtynator">GitHub</a>.
+]]>
+        </de>
+        <nl><![CDATA[Geen fan van schone voertuigen? Sproei ze vies met de Dirtynator.
+
+Dirtynator (gebouw)
+Categorie: Werktuigen
+Prijs: €2.000
+
+Dirtynator (voertuig)
+Categorie: Handgereedschap > Diversen
+Prijs: €2.000
+Vermogen: 7 pk
+Max. snelheid: 7 km/h
+
+Laatste versie en bug reports op <a href="https://github.com/Jos-Modding/FS25_Dirtynator">GitHub</a>.
+]]>
+        </nl>
+    </description>
+    <iconFilename>icon_Dirtynator.dds</iconFilename>
+    <multiplayer supported="true"/>
+    <l10n filenamePrefix="l10n/l10n"/>
+    <storeItems>
+        <storeItem xmlFilename="xml/hds9184M.xml"/>
+        <storeItem xmlFilename="xml/hds9184M_placeable.xml"/>
+    </storeItems>
+</modDesc>
